@@ -1,0 +1,148 @@
+Grundlagen C Seminar
+
+Peter Loos
+
+30+ Jahre:
+
+SW-Entwicklung:
+
+Pascal / C/C++ / Java / C# / Mobile Programming (Android)
+
+Back-to-the-Roots: C/C++
+
+Training / Schulung
+
+=========================================================
+
+Github: Unterlagen
+======
+
+https://github.com
+
+https://github.com/pelocpp
+
+
+Visual Studio (NICHT: Code) Community (for free)
+================================================
+
+========================================================
+
+Ablauf / Erstellung eines C-Programms:
+--------------------------------------
+
+C ist eine Programmiersprache.
+Es gibt viele Analogien zu natürlichen Sprachen:
+
+== Lexikon / Wörterbuch
+== Grammatik / Syntax / Rechtschreibung
+== Bedeutung / Semantik: Was tut das Programm
+
+Bemerkung:
+
+C ist eine formatfreie Programmiersprache
+
+Die Anweisungen müssen nicht Zeile für Zeile geschrieben werden.
+
+
+Mehrere Schritte:
+
+A) Quelltext eingeben / Source Code
+
+   Mit einem Editor (Nicht: Word)
+
+B) Vor der eigentlichen Übersetzung:  Läuft ein separates Tool: Präprozessor
+
+   Diese wandelt alle Zeilen um, die mit # anfangen
+
+C) Text für ein C-Programm unterliegt einer Syntax / Grammatik:
+
+   Dies muss überprüft werden: Tool: Übersetzer / Compiler
+
+   1. Ziel: KEINE Fehler, sonst Abbruch
+
+      Wie: Rechte Maustaste auf der Datei  ==> Menü  "Compile"
+
+   2. Ziel: Pseudo-Maschinencode erzeugen / neutrale Darstellung
+
+      "x64\\Debug\\Program.obj"
+
+      Linux: .o  
+
+      Das ist ein spezifiziertes Format: IOFF // COFF
+
+      The Common Object File Format (COFF) is a format for executable, object code
+      oder
+      Intel OMF (Object Module Format)
+
+D) Wer erzeugt den finalen Maschinencode: 2 Tools: Compiler + Linker
+
+   i) Können Fehler vorhanden sein:
+
+      zB gibt es main nicht : Einsprungpunkt // Anfang des Programms.
+
+      Abbruch
+
+
+   ii) Keine Fehler: Haben ein Maschinenprogramm erzeugt.
+
+   Wie: Rechte Maustaste auf dem Projekt ===> "Erstellen"
+
+   Ziel: Eine Datei mit der Endung .exe   (( Unix: KEINE Endung ))
+
+E) Maschine: Hardware: CPU -  Recheneinheit -  Register / Memory / IO / …
+
+   Jede Maschine / CPU (Recheneinheit) hat ihre eigenen Sprache: Befehlssatz / CPU Instruktionen: 
+
+   Beispiel:  Intel:  MOV, JMP, CMP, ..
+
+Beispiel:
+
+    int a = 1;
+00007FF7E25B1849  mov         dword ptr [a],1  
+    int b = 2;
+00007FF7E25B1850  mov         dword ptr [b],2  
+    int c = a + b;
+00007FF7E25B1857  mov         eax,dword ptr [b]  
+00007FF7E25B185A  mov         ecx,dword ptr [a]  
+00007FF7E25B185D  add         ecx,eax  
+00007FF7E25B185F  mov         eax,ecx  
+00007FF7E25B1861  mov         dword ptr [c],eax  
+
+C hat das Ziel, die C-Anweisungen auf Maschinensprache umzusetzen.
+
+
+   
+
+Analyse von Hello World:
+------------------------
+
+#include <stdio.h>      -  Spezialzeile  ===> Hat mit C nichts zu tun … -  Inhalt einer Bibliothek wird bekannt gemacht
+
+void main ()
+{
+    printf("Hello World");
+}
+
+LEXIKON: void -  main -  ( -  ) -  { -  printf -  ( -  "Hello World" -  ) -  ;  -  } //
+
+Beispiel: 11 Wörter
+
+Grammatik:  Wir haben aktuell ein Unterprogramm
+
+Besonderheit für C-Programme:
+Wo beginnt ein C-Programm mit der Ausführung, wenn mehrere Anweisungen vorhanden sind?
+
+Mit einem bestimmten Unterprogramm: Das den Namen 'main' hat !!!
+
+
+=================================================================
+
+Tool zum Testen // zum Suchen von Fehlern: Debugger
+
+bug im Amerikanischen:  Käfer // Wanze
+
+to debug: Entwanzen  
+
+Debugger: "Wanzen" im Programm finden :)
+
+=================================================================
