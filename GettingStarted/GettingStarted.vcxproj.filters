@@ -22,4 +22,7 @@
   <ItemGroup>
     <Text Include="..\Notizzettel.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Readme.md" />
+  </ItemGroup>
 </Project>

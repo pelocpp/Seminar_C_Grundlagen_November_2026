@@ -2,6 +2,9 @@ Grundlagen C Seminar
 
 Peter Loos
 
+peter.loos@gmx.de
+-----------------
+
 30+ Jahre:
 
 SW-Entwicklung:
@@ -111,7 +114,23 @@ Beispiel:
 C hat das Ziel, die C-Anweisungen auf Maschinensprache umzusetzen.
 
 
-   
+Bemerkung / Achtung:
+
+Häufig werden bei Fehlern in C keine Fehler, sondern eine  WARNUNG produziert:
+
+Warum ???????
+
+Entscheidung des Erfinders von C: Dennis Ritchie
+
+Credo:  "A programmer knows what he does" :)
+
+Fehler nur im äußersten Notfall :)
+
+
+
+
+
+
 
 Analyse von Hello World:
 ------------------------
@@ -146,3 +165,249 @@ to debug: Entwanzen
 Debugger: "Wanzen" im Programm finden :)
 
 =================================================================
+
+Variable:
+
+Stück Speicher: Wie wird es angesprochen: Name // Bezeichner
+
+Datentyp:
+
+Legt die Interpretation des Stück Speichers fest:
+
+Ganze Zahl:       123   -11
+
+Gleitpunktzahl:   123.345
+
+Zeichen:          A  ;  !  
+
+Zeichenkette:     Viele Zeichen    "ABC"   "Hello World"
+
+Ganze Zahl:       123   -11
+
+                  Welcher Typ: int
+
+Gleitpunktzahl:   123.345
+
+                  Welcher Typ: double
+
+Mehrere Typen für int:  short, int, long, long long: wieso ?????
+
+                  Das hat mit der Groesse zu tun:
+
+Speicher:   
+
+Bit:          0 oder 1
+Byte:         8 Bits
+Word:         2 Bytes
+Double Word:  4 Bytes // 32 Bits
+Quad Word:    8 Byte // 64 Bits
+
+C:  Funktion // Operator:  sizeof: Anzahl BYTES  im Speicher
+
+====================================================
+
+Ganze Zahlen: 
+
+i) Wie wird zB 123 auf Bits im Speicher abgebildet ???
+
+   ==> Microcomputer Technik
+
+   ==> Dual-System // 2 hoch // Zweierkomplement
+
+ii) Können ganze Zahlen auch ein Vorzeichen haben ???
+    Ja.
+
+
+Beispiel:
+
+17
+
+17 / 2 = 8 Rest 1
+8 /2 = 4   Rest 0
+4 / 2 = 2  Rest 0
+2 / 2 = 1  Rest 0
+1 / 2 = 0  Rest 1
+
+10001
+
+Tool: Calculator
+
+Beispiel:
+
+Datentyp short: 2 Byte
+
+Wertebereich:
+
+short meineZahl = 123123123213213213;
+
+
+Datentyp short:
+
+16 Bits  ===> 15 Bits für den Wert // 1 Bit für das Vorzeichen  // oberste Bit
+
+Wertebereich:  -32.768  bis  +32.767
+
+Option:
+
+Man kann Werte für ganze Zahlen auch OHNE Vorzeichen betrachten:
+
+a) Den Typ um unsigned ergänzen
+
+b) VORSICHT !!!!!!!!!!!!!!!!!!!!!
+
+unsigned short a = -1;   // FALSCH !!!!!!!!!!!!!!!!!!!!!
+
+c) Geänderter Wertebereich:
+
+   0 bis 65.535
+
+=========================================================
+
+Fazit:
+
+Ganze Zahlen:
+
+Zweierkomplement
+Mit oder ohne Vorzeichen
+Wertebereich wird durch die Anzahl Bits festgelegt:
+
+Bit:          0 oder 1
+Byte:         8 Bits
+Word:         2 Bytes             // 0 bis 65.535 oder -32.768  bis  +32.767
+Double Word:  4 Bytes // 32 Bits  // -2.147.483.648 bis 2.147.483.647 oder 0 bis 4.294.967.295
+Quad Word:    8 Byte // 64 Bits
+
+=================================================================
+
+Zahlen mit Komma:
+
+Intern eine andere Darstellung: IEEE Format
+
+C: 2 Datentypen für Zahlen mit Komma:
+
+float:  4 Bytes
+double: 8 Bytes
+
+Interner Aufbau:
+
+Vorzeichen, Exponent und Mantisse
+
+Beispiel
+
+123.456
+
+01000010111101101110100101111001:   32 Bits
+
+Tool:
+
+https://www.h-schmidt.net/FloatConverter/IEEE754.html
+
+===================================================
+
+Konstante:
+
+int a = 123;   // 123 ist eine Konstante // konstanter Wert
+
+Per Definition (Lexikons von C) ist jeder Konstanten ein Datentyp zugeordnet:
+
+123       ==> int
+
+123.345   ==> double
+
+123.345f  ==> float
+123.345F  ==> float
+
+"Hello"   ==> Zeichenkette 
+
+'A'       ==> EIN Zeichen // char
+
+=============================================================
+
+Kontrollstrukturen:
+
+Die if-Anweisung // Statement
+
+SYNTAX:
+
+if ( bedingung ) {
+    Anweisungen // können mehrere sein
+}
+
+oder
+
+if ( bedingung ) {
+    Anweisungen // können mehrere sein
+}
+else {
+    andere Anweisungen // können mehrere sein
+}
+
+bedingung: 
+
+Beispiel:
+
+    int a = 1;
+    int b = 2;
+
+    // Vergleichen: Ist a kleiner als b
+
+    a < b    Ergebnis: Richtig oder falsch // Wahr oder nicht wahr // true / false
+
+
+===========================================================================
+
+Debugger
+--------
+
+Zum Testen
+
+Zum kontrollierten Ausführen eines Programms:
+       Schritt für Schritt
+       Zeile für Zeile
+
+Ein paar magische Tasten:
+
+== Haltepunkt: Break Point  // F9 oder Maus
+== Gehe / Laufe zum nächsten Haltepunkt: Go // F5 oder grüner Pfeil (der ausgefüllte)
+== Führe eine Zeile aus // Einzelschritt // F10 oder Pfeiltaste
+== Inhalt einer Variablen anschauen: Maus drüberziehen // to hover
+
+=========================================================
+
+Vergleichen:
+
+<    kleiner
+<=   kleiner-gleich
+
+>    groesser
+>=   groesser-gleich
+
+==   gleich
+!=   ungleich
+
+Beobachtung:
+
+Habe 2 Bedingungen
+------------------
+
+Verküpfung mehrerer Bedingungen:  && oder ||
+
+
+== Ist a gleich 1 UND b = 2:    BEIDE müssen erfüllt sein
+
+== Ist a gleich 1 ODER b = 2:   EINE VON BEIDEN müssen erfüllt sein
+
+Wie formulieren wir das in C ????
+
+Formal:  
+Logische Und / And
+Logische Oder / Or
+
+Operator: Logisches Und           &&
+Operator: Logisches Oder          ||
+
+
+========================================
+
+Pause:  while  // Wiederholungsanweisung
+
