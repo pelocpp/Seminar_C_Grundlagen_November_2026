@@ -409,5 +409,208 @@ Operator: Logisches Oder          ||
 
 ========================================
 
-Pause:  while  // Wiederholungsanweisung
+while  // Wiederholungsanweisung
+for    // Wiederholungsanweisung
+
+SYNTAX:
+
+while ( bedingung ) {
+
+    anweisungen();
+}
+
+In einer Wiederholungsanweisung sind zwei
+besondere Schlüsselwörter anwendbar:
+
+break und continue
+------------------
+
+break: Verlässt eine umgebende Wiederholungsanweisung ( while / for )
+
+continue: Kehrt direkt in die Bedingung nach oben.
+
+
+
+================================================
+
+Bemerkung:
+
+"a ist ungerade"
+
+Gibt es so nicht:
+
+Wenn der Rest bei Division durch 2 gleich 1 ist
+
+a / 2:  Das ist die Division:  9 / 2 = 4
+
+
+Modulus: Rest , der bei einer Division vorhanden ist
+a % 2:  Das ist der Rest bei der Division:  9 / 2  hat Rest 1
+
+================================================
+
+
+2 Aufgabe:
+
+Teuflische Folge
+
+Zahlenfolge:
+
+Startwert: int n
+
+Nächster Wert:
+
+n ist gerade:      n / 2
+n ist ungerade:    3 * n + 1
+
+Beispiel:
+
+7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1: ENDE
+
+Was ist teuflisch:
+
+A) Behauptung: Für JEDEN Startwert ENDET diese Folge nach endlich vielen Schritten.
+
+b) Diese Behauptung konnte man bis heute nicht beweisen !!!!
+
+Collatz
+
+Fest:  int n = 7;
+
+================================================================
+
+Zinzeszinsrechung:
+
+Wir legen 1.000 Euro zu 5% Zinsen an.
+Wieviel Geld habe ich nach 10 Jahren ?
+
+1.000: 1% = 10, 5% = 50
+
+Hier kommt bei dem Geldbetrag der Datentyp double ins Spiel.
+
+0. Jahr: 1.000.00
+1. Jahr: 1.050.00
+2. Jahr: 1.102,50
+...
+10. Jahr: ???
+
+
+================================================================
+
+for-Schleife // for-Wiederholungs Kontrollstruktur
+
+SYNTAX:
+
+for (  init   ;  bedingung   ; weiter_schalten  ) {
+}
+
+init: EINMAL
+
+
+for (  int i = 0 ;  i < 10  ; i = i + 1 ) {
+}
+
+for (int i = 0; i < 10; i = i + 1) {
+    printf("i = %d\n", i);
+}
+
+printf("\n");
+// man kann diese for-Schleife 1:1 auf while umsetzen - und umgekehrt
+
+int i = 0;
+while (i < 10) {
+    printf("i = %d\n", i);
+    i = i + 1;
+}
+
+=============================================================
+
+Bemerkung:
+
+Der Inkrement-Operator kennt 2 Varianten:
+
+Pre-Inkrement   // Davor
+Post-Inkrement  // Danach
+
+Meine Empfehlung: Be careful  // Don't use it :)
+
+
+=============================================================
+
+Felder // Array
+
+Ein Feld ist ein Speicherbereich von MEHREREN Variablen
+DESSELBEN Typs, die dicht aneiander im Speicher liegen.
+
+Beispiel:
+
+Lottozahlen:  6 Stock
+
+int zahl1;
+int zahl2;
+int zahl3;
+int zahl4;
+int zahl5;
+int zahl6;
+
+Für 6 int-Variablen kann man auch
+
+int lottozahlen [6];    
+
+Damit haben wir Speicher für 6 int-Variablen geschaffen.
+
+SYNTAX für den Zugriff:
+
+Lesen:  int n = lottozahlen [3];
+
+Welche Werte sind in den eckigen Klammern erlaubt: 0 bis 5
+
+Andere Antworten: 1 bis 6 : FALSCH
+
+
+=======================================
+
+	int index = 6;
+	lottozahlen[index] = 27;  // Problem: Index 6 ist FALSCH: 0 .. 5
+
+Was passiert ???
+
+Hängt von der jeweiligen Programmiersprache ab ???
+
+Python, Java, C#:  Abbruch // kontrollierte Ausnahme // Exception verursacht.
+
+C:                 Nichts.  Konseuenz: Undefiniertes Verhalten // Absturz
+
+
+===========================================================
+
+C und Felder:
+
+Mit einem Index greife ich auf eine bestimmte Position 
+in einem Feld zu.
+
+ACHTUNG: Es gibt KEINE Überprüfung in C (Release-Modus) für die Gültigkeit.
+
+Whyyyyyyyyyyyy:        Performanz
+
+
+===========================================================
+
+Weiter: 
+
+== Mini-Übung: zu Feldern ...
+== Unterprogramme
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -18,6 +18,12 @@
     <ClCompile Include="Program.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Topic_02_Felder.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic_01_Getting_Started.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizzettel.txt" />

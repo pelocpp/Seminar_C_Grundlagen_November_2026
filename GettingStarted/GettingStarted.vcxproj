@@ -140,6 +140,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Program.c" />
+    <ClCompile Include="Topic_01_Getting_Started.c" />
+    <ClCompile Include="Topic_02_Felder.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizzettel.txt" />
