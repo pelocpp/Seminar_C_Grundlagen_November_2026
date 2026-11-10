@@ -24,11 +24,19 @@
     <ClCompile Include="Topic_01_Getting_Started.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Topic_03_Unterprogramme.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizzettel.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyFunctions.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

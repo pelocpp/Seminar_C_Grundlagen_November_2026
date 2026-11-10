@@ -1,8 +1,37 @@
 #include <stdio.h>  // standard input output
+#include <stdlib.h>  // standard input output
+#include <time.h>
+
+void zufall() {
+
+	// Zufallszahlen // Reproduzierbarkeit
+
+	/* 1. Variante */ // srand(100);
+	/* 2. Variante */ srand(time(NULL));   // Anzahl Millisekunden seit Einschalten des Rechners
+
+	int n1 = rand();   // Unterprogrammaufruf
+	int n2 = rand();   // Unterprogrammaufruf
+
+	printf("n: %d\n", n1);
+	printf("n: %d\n", n2);
+}
+
+// a) Ein Feld anlegen der Länge 10
+//    int zahlen[10] = { 0 };
+
+// b) Das Feld mit Zufallszahlen belegen
+
+// c) Das Feld in der Konsole ausgeben:  for // while
+
+// d) Die kleines und groesste Zahl in dem Feld berechnen.
+
+
+
+#define Size 6 // Kommmentar
 
 void felder_01() {
 
-	int lottozahlen[6] = { 0 };
+	int lottozahlen[Size] = { 0 };
 
 	lottozahlen[0] = 27;
 	lottozahlen[1] = 1;

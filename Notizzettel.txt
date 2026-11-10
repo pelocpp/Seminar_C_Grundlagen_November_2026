@@ -55,7 +55,7 @@ A) Quelltext eingeben / Source Code
 
 B) Vor der eigentlichen Übersetzung:  Läuft ein separates Tool: Präprozessor
 
-   Diese wandelt alle Zeilen um, die mit # anfangen
+   Dieser wandelt alle Zeilen um, die mit # anfangen
 
 C) Text für ein C-Programm unterliegt einer Syntax / Grammatik:
 
@@ -601,13 +601,138 @@ Weiter:
 == Mini-Übung: zu Feldern ...
 == Unterprogramme
 
+===================================================
+
+Zufallszahlen:
+
+Werden von rand berechnet.
+
+Achtung: Berechnet heißt: Es werden immer dieselben Werte berechnet.
+
+===================================================
+
+Präprozessor:
+
+Vor der eigentlichen Übersetzung:  Läuft ein separates Tool: Präprozessor
+
+Dieser wandelt alle Zeilen um, die mit # anfangen
+
+Beispiel:
+
+#define Size 6
+
+int lottozahlen[Size] = { 0 };
+
+Danach:
+
+int lottozahlen[6] = { 0 };
+
+==========================================================
+
+Was ist ein Unterprogramm?
+
+== Wiederverwendung von bereits implementierten Teilprogrammen.
+
+== Zusammenfassung einer Reihe von Anweisungen
+   unter einem gemeinsamen Namen.
 
 
+SYNTAX:
+
+Rückgabetyp  Name_des_Unterprogramms ( Parameter ) {
+
+   ein oder mehrere Anweisungen;
+
+}
+
+Wie wird ein Unterprogramm aufgerufen: Durch seinen Namen.
+
+Parameter: Werte, die man an ein Unterprogramm übergeben,
+weiterreichen kann:
 
 
+Allgemein betrachtet: 2 Arten von Unterprogrammen:
+
+a) Welche ohne Ergebnis: Kein Rückgabetyp: void -- nichts
+
+b) Welche mit Ergebnis:  Mit Rückgabetyp
+
+   Das Ergbnis wird mit "return" zurückgegeben.
+
+   Diese werden auch als "Funktion" bezeichnet
+
+==========================================================
+
+Architektur eines C-Programms:
+
+Auf der OBERSTEN Ebene:
+
+== Variablen definiert werden // kommt noch
+
+== Unterprogramme definiert werden
+
+== In dem Unterprogramm 'main' fängt die Ausführung an.
+
+   Im Regelfall wird hier in andere Unterprogramme verzweigt.
+
+==========================================================
+
+Architektur eines C-Programms:
+
+extern void felder_01();
+extern void felder_02();
+extern void zufall();
+extern void einUnterprogramm(int wieOft);
+extern int malZwei(int wert);
 
 
+== extern-Deklarationen machen die Namen und Parameter und den Rückgabetyp in
+anderen Dateien bekannt.
 
+== Sinnvollerweise: An einer zentralen Stelle abgelegt.
+
+   Header-Datei
+
+===========================================================
+
+2 Schwierigkeisgrade:
+
+a) Einsteiger-Level
+
+b) Datentyp Pointer / Adresse: Profi-Level
+
+===========================================================
+
+Übung:
+
+Schreibe eine Funktion maximum:
+
+Diese hat 3 int-Paramter:  int wert1, int wert2, int wert3
+
+Dies hat einen Rückgabetyp: int
+
+Sie liefert den groessten dieser drei Werte als Ergebnis zurück.
+
+Hinweis: Wir arbeiten nur mit der if-Anweisung
+
+===========================================================
+
+Fakultät-Funktion:
+
+n! = 1 * 2 * 3 * ... * (n-1) * n
+
+Beispiel:
+
+4! = 1 * 2 * 3 * 4 = 24
+
+Schreibe eine Funktion: fakul
+
+== 1 Parameter des Typs int
+== Rückgabetyp: Typ int
+
+Es sind die Wert der Fakultät von 1 bis 25 in der Konsole auszugeben.
+
+========================================================
 
 
 

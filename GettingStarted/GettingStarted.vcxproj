@@ -142,12 +142,16 @@
     <ClCompile Include="Program.c" />
     <ClCompile Include="Topic_01_Getting_Started.c" />
     <ClCompile Include="Topic_02_Felder.c" />
+    <ClCompile Include="Topic_03_Unterprogramme.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizzettel.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
