@@ -4,7 +4,13 @@
 
 // auch ein Unterprogramm: Besonders, weil hier das gesamte Programm
 // anfängt ==> Namen 'main'
+
+
 void main() {
+    test_uhrzeit();
+}
+
+void main_unterprogramme() {
 
     int wieviel = 3;
     einUnterprogramm(wieviel);   // Parameter 

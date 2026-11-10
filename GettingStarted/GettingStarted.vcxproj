@@ -143,6 +143,7 @@
     <ClCompile Include="Topic_01_Getting_Started.c" />
     <ClCompile Include="Topic_02_Felder.c" />
     <ClCompile Include="Topic_03_Unterprogramme.c" />
+    <ClCompile Include="Topic_04_Strukturen.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizzettel.txt" />
@@ -152,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFunctions.h" />
+    <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

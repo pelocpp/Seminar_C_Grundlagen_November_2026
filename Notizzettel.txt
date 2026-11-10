@@ -734,6 +734,53 @@ Es sind die Wert der Fakultät von 1 bis 25 in der Konsole auszugeben.
 
 ========================================================
 
+Daten:
+
+==> einfache, elementaren Variablen (int, long long, double, ...)
+
+==> Felder: Viele Werte hintereinander:
+
+            Alle Werte müssen vom selben Typ sein.
+
+==> Strukturen:
+
+    Beispiel: Struktur Person
+
+    Vorname (Zeichenkette), Nachname (Zeichenkette) , Alter (int)
+
+    Werte können unterschiedlichen Typs sein.
+
+    Zugriff: Über den Namen des einzelnen Elements.
+
+
+Syntax von typedef:
+
+typedef alter_name neuer_name;
+
+===========================================================
+
+Strukturen und Unterprogramme
+-----------------------------
+
+===========================================================
+
+Bemerkung:
+
+extern int equals(Time left, Time right);  
+
+Ergebnis ist "wahr" oder "falsch"  // ja oder nein 
+
+In vielen Sprachen:  true oder false // Nicht in C
+
+Wie in C:
+
+0                         == falsch
+
+Alles andere:
+Alles von 0 verschieden:  == wahr
+
+Damit ist int als Typ gefragt.
+
 
 
 
