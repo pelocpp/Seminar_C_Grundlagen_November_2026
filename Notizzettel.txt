@@ -1024,7 +1024,8 @@ Tipp: Erst mal Zeichen // Feld von Zeichen einlesen
 Verbesserungen
 --------------
 
+Die Puffer auf exakte Länge anpassen.
 
-
-
-
+==========================================================
+Ende
+==========================================================
