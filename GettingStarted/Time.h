@@ -26,4 +26,8 @@ extern int notEquals(Time left, Time right);
 extern int lessThan(Time left, Time right);
 extern int greaterThan(Time left, Time right);
 
+// extern void reset(Time time);
+
+extern void reset(Time* time);
+
 

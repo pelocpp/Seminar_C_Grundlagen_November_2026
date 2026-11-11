@@ -30,6 +30,15 @@
     <ClCompile Include="Topic_04_Strukturen.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Topic_05_Pointer.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic_06_Memory.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="07_Topic_Wallet.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizzettel.txt" />
@@ -44,5 +53,16 @@
     <ClInclude Include="Time.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\01_Stack.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\02_Stack_Call_by_Address.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\02_Stack_Call_by_Copy.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
   </ItemGroup>
 </Project>

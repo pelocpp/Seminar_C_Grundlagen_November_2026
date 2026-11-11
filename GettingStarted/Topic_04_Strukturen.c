@@ -14,7 +14,7 @@ void test_uhrzeit()
 	int seconds1 = 0;
 
 	// we can do better
-	Time now = { 15, 45, 0 };
+	Time now = { 10, 5, 30 };
 	Time ende = { 17, 0, 0 };
 
 	// oder
@@ -30,9 +30,17 @@ void test_uhrzeit()
 	//// eine Struktur ausgeben:
 	//printf("Uhrzeit: %02d:%02d:%02d\n", ende.hours, ende.minutes, ende.seconds);
 
+	//print(now);
+
+	//print(ende);
+
+	// ===================================
+
 	print(now);
 
-	print(ende);
+	reset(& now);
+
+	print(now);
 }
 
 void print(Time time)
@@ -41,4 +49,21 @@ void print(Time time)
 }
 
 
+//void reset(Time time)
+//{
+//	time.hours = 0;
+//	time.minutes = 0;
+//	time.seconds = 0;
+//}
 
+
+void reset(Time* time)
+{
+  //   (*time).hours = 0;
+	 //(*time).minutes = 0;
+	 //(*time).seconds = 0;
+
+	time -> hours = 0;
+	time -> minutes = 0;
+	time -> seconds = 0;
+}

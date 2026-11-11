@@ -24,6 +24,8 @@ https://github.com
 
 https://github.com/pelocpp
 
+https://github.com/pelocpp/c_introduction
+
 
 Visual Studio (NICHT: Code) Community (for free)
 ================================================
@@ -781,7 +783,153 @@ Alles von 0 verschieden:  == wahr
 
 Damit ist int als Typ gefragt.
 
+===========================================================
 
+In C kann man von einer Variablen die Adresse im Speicher ermitteln ...
+und mit dieser Adresse auch arbeiten.
+
+Was ist eine Adresse ???
+
+Eine ganze Zahl !
+
+1024
+
+Diese wollen wir nicht mit int  verwechseln / mischen
+
+
+
+int im Speicher:   4 Bytes
+
+0x00000077842FFA A4
+0x00000077842FFA A5
+0x00000077842FFA A6
+0x00000077842FFA A7
+
+7b 00 00 00
+
+123 ==> 00 00 00 7b
+
+Analyse des Programms:
+
+   14 fb 0f 54  3b 00 00 00 
+
+0x 00 00 00 3b 54 0f fb 14
+
+c8 01
+
+01 c8
+
+
+Beispiel:
+
+0x 000003b540ffb 14
+
+hier mit ++:
+
+0x 000003b540ffb 18
+
+
+++ auf diese Adresse anwenden:
+
+0x 000000DEA54FF9 B4
+
+Zu dem Wert 456 // 01c8
+
+0x 000000DEA54FF9 B4
+0x 000000DEA54FF9 B5
+0x 000000DEA54FF9 B6
+0x 000000DEA54FF9 B7
+
+
+================================================================
+
+Adressen in C:
+
+Wozu ?????????????????????????????????????????????????????????????
+
+Welche Fragen tun sich jetzt auf:
+
+Wo liegen Variablen (Strukturvariablen) im Speicher ???
+
+Wie werden Variablen an Unterprogramme übergeben ???
+
+i) Wo liegen Variablen (Strukturvariablen) im Speicher ???
+
+
+a) Globale Variablen
+
+ Sind überall / im ganzen Programm verfügbar.
+
+
+b) Lokale Variablen
+
+Sind nur im Kontext eines Unterprogramms verfügbar !!!
+
+Nicht von außerhalb // nicht von anderen Unterprogrammen
+
+c) Dynamische Variablen
+
+   Ich will mitten im laufenden Programm Speicher haben:
+
+   Spezielle Funktion:   malloc  // memory allocate
+                         free    // zurückgeben
+
+============================================
+
+Wie geht das ????????????????????????????
+
+Stück Speicher:  Besondere Verwaltungs- / Zugriffstechnik :
+
+Stapel / Stack:
+
+Dieser kann nur
+
+== an einer Stelle
+== in eine Richtung 
+
+belegt / verwendet werden !
+
+
+Mechanismus des Unterprogrammaufrufs:
+
+== Mikrocomputer Technik
+
+== Stack Frame
+
+==========================================================
+
+Übergabe von Parametern:
+------------------------
+
+Wie werden Parameter an ein Unterprogramm übergeben ????
+
+A) Als Kopie !!!
+
+Es wird der Wert übergeben: Value
+
+"Call-by-Copy"  // andere Formulierung: Call-by-Value
+
+Das gilt auch für Strukturen !!!!!!!!!!!!  Noch teurer
+
+B) Als Adresse
+
+C kennt Adressen als Datentyp 
+
+Damit können auch Adressen übergeben werden:
+
+"Call-by-Address"
+
+Damit lassen sich Variablen AUSSERHALB der Funktion ändern ....
+
+
+
+===========================================================
+
+Bemerkung:
+
+Wenn mehrere Operatoren in einem Ausdruck auftreten:  Punkt-vor-Strich
+
+Tabelle: Opertoren Vorrang
 
 
 

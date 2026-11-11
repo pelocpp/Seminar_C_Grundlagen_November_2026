@@ -41,4 +41,41 @@ void einUnterprogramm(int wieOft) {     // Stellvertreter / Parameter
 	//}
 
 	//return;  // hmmm, unüblich, überflüssig
+
+	int ergebnis = 123;   // ?!?!?! Geht das .. oder geht das nicht ???
+}
+
+
+void malZweiAlternativ(int wert) {
+
+	wert = 2 * wert;
+}
+
+void malZweiAlternativEx(int* wert) {
+
+	// wert = 2 * wert;
+
+	// a) Wert hinter der Adresse lesen
+	// indirektes Lesen: * Operator 
+	int value = *wert;
+
+	value = 2 * value;
+
+	// b) Wert an die Adresse schreiben
+	// indirektes Schreiben: * Operator
+	*wert = value;
+}
+
+
+void testeMalZweiAlternativ()
+{
+	int n = 10;
+	printf("n vorher: %d\n", n);
+
+	malZweiAlternativ(n);
+	printf("n nachher: %d\n", n);
+
+	malZweiAlternativEx(& n);
+	printf("n nachher: %d\n", n);
+
 }

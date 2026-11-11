@@ -7,6 +7,9 @@
 
 
 void main() {
+
+  //  printf("Bin in main: %d\n", globalVariable);
+
     test_uhrzeit();
 }
 
