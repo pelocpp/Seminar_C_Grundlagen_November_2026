@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+// globalen Datensegment
 int globalVariable = 123;   // hier wird eine globale Variable DEFINIERT / mit Vorbelegung.
 
 void memory_01()

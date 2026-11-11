@@ -922,7 +922,6 @@ Damit können auch Adressen übergeben werden:
 Damit lassen sich Variablen AUSSERHALB der Funktion ändern ....
 
 
-
 ===========================================================
 
 Bemerkung:
@@ -930,6 +929,101 @@ Bemerkung:
 Wenn mehrere Operatoren in einem Ausdruck auftreten:  Punkt-vor-Strich
 
 Tabelle: Opertoren Vorrang
+
+
+===========================================================
+
+All-In:
+
+Vieles, was noch angesprochen werden sollte:
+
+a) Zeichenketten
+
+b) Dyn. Speicher
+
+c) C Bibliothek
+
+==========================================================
+
+Zeichen (Singular):
+
+char
+
+Werden intern auf ganze Zahlen abgebildet (2-er Komplement)
+
+
+SYNTAX: für Konstante:   '?'
+
+Für Zeichen gibt es eine Tabelle:
+
+'?' <=======>  Code:  ASCII-Code // Ascii-Tabelle
+
+char <===>     int
+
+==========================================================
+
+Zeichenketten:
+
+"ABC"
+
+Welchen Typ hat in C eine Zeichenkette ?????????
+
+2 Antworten:
+
+i) Eine Zeichenkette ist wie ein Array / Feld: Feld von Zeichen.
+
+   Hier kann man (in dem Feld) lesen, schreiben, ändern.
+
+ii) Eine Zeichenkette kann auch durch deren Adresse im Speicher definiert werden.
+   Dann liegen die Zeichen in einem read-only Segmen.
+   Hier kann man  nur lesen !!!  
+
+
+Wie lange ist eine Zeichenkette:  Steht nirgends im Speicher
+
+Statt dessen: Am Ende steht der Wert 0 im Speicher.
+
+Damit kann man die Länge bestimmen: Man muss die 0 suchen.
+
+==========================================================
+
+C Bibliothek:
+
+CRT - C Runtime Library
+
+Für Zeichenketten mehrere Funkionen:
+
+strlen
+
+Rückgabe: Länge der Zeichenkette:
+
+int: Möglich, denkbar
+
+size_t: 
+
+=============================================================
+
+'scanf': This function or variable may be unsafe.
+Consider using scanf_s instead. To disable deprecation,
+use _CRT_SECURE_NO_WARNINGS. See online help for details.
+
+==========================================================
+
+Korrekte Eingabe:
+
+Ganz allgemein: Nicht ganz einfach ...........
+
+Tipp: Erst mal Zeichen // Feld von Zeichen einlesen 
+
+     // Alles Tippen .. und alles ist erlaubt
+
+     Dann kontrollieren .......
+
+==========================================================
+
+Verbesserungen
+--------------
+
 
 
 

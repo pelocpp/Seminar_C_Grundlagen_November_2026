@@ -39,6 +39,12 @@
     <ClCompile Include="07_Topic_Wallet.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Topic_07_Zeichenketten.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic_08_Kontakte.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizzettel.txt" />
@@ -62,6 +68,12 @@
       <Filter>Ressourcendateien</Filter>
     </Image>
     <Image Include="..\02_Stack_Call_by_Copy.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\03_Stack_Call_by_Copy_Time.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\04_Memory.png">
       <Filter>Ressourcendateien</Filter>
     </Image>
   </ItemGroup>

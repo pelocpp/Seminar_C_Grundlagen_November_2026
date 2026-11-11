@@ -147,6 +147,8 @@
     <ClCompile Include="Topic_04_Strukturen.c" />
     <ClCompile Include="Topic_05_Pointer.c" />
     <ClCompile Include="Topic_06_Memory.c" />
+    <ClCompile Include="Topic_07_Zeichenketten.c" />
+    <ClCompile Include="Topic_08_Kontakte.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notizzettel.txt" />
@@ -162,6 +164,8 @@
     <Image Include="..\01_Stack.png" />
     <Image Include="..\02_Stack_Call_by_Address.png" />
     <Image Include="..\02_Stack_Call_by_Copy.png" />
+    <Image Include="..\03_Stack_Call_by_Copy_Time.png" />
+    <Image Include="..\04_Memory.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

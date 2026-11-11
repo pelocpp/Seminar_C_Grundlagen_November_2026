@@ -47,5 +47,5 @@ void test_wallet()
 	Wallet myWallet = { 0, 0 };
 
 	// myWallet.euros = -50;
-	add(& myWallet, 50);
+	// add(& myWallet, 50);
 }

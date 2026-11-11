@@ -15,3 +15,8 @@ extern void pointer();
 extern void memory();
 
 extern void testeMalZweiAlternativ();
+
+extern void zeichenketten();
+
+extern void kontakte();
+
